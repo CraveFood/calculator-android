@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+  <color name="colorDisabled">#D3DADC</color>
+  <color name="colorEqualButtonBackground">#1A2ECC71</color>
+  <color name="colorEqualButtonIcon">#2ECC71</color>
+  <color name="colorOperationsButtonBackground">#1AFD6A08</color>
+  <color name="colorOperationsButtonIcon">#FD6A08</color>
+  <color name="colorNumbersButtonBackground">@android:color/white</color>
+  <color name="colorNumbersButtonIcon">#2F313A</color>
+  <color name="colorConfirmButtonBackground">#FD6A08</color>
+  <color name="colorConfirmButtonText">@android:color/white</color>
+  <color name="colorCancelButtonBackground">@android:color/white</color>
+  <color name="colorCancelButtonText">#59636F</color>
+  <color name="colorOperationText">#2F313A</color>
+  <color name="colorPreviewText">#4D000000</color>
+  <color name="colorResultText">#2F313A</color>
 </resources>
