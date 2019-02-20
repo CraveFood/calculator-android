@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="padding_top_calc_header">32dp</dimen>
+  <dimen name="padding_bottom_calc_header">0dp</dimen>
+  <dimen name="padding_bottom_buttons">10dp</dimen>
+  <dimen name="height_bottom_buttons">50dp</dimen>
+</resources>
