@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <color name="colorDisabled">#D3DADC</color>
-  <color name="colorEqualButtonBackground">#1A2ECC71</color>
+  <color name="colorRippleButton">#000000</color>
+  <color name="colorEqualButtonBackground">#0D2ECC71</color>
   <color name="colorEqualButtonIcon">#2ECC71</color>
-  <color name="colorOperationsButtonBackground">#1AFD6A08</color>
+  <color name="colorOperationsButtonBackground">#0DFD6A08</color>
   <color name="colorOperationsButtonIcon">#FD6A08</color>
   <color name="colorNumbersButtonBackground">@android:color/white</color>
   <color name="colorNumbersButtonIcon">#2F313A</color>
