@@ -1,23 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CalculatorFragment">
 
-  <TextView
-      android:layout_width="wrap_content"
-      android:text="@string/app_name"
-      android:gravity="center"
-      android:textSize="24sp"
-      android:layout_height="wrap_content"
-      android:id="@+id/textView"
+  <LinearLayout
+      android:id="@+id/layoutParentHeader"
+      android:layout_width="match_parent"
       app:layout_constraintTop_toTopOf="parent"
+      android:paddingStart="16dp"
+      android:paddingEnd="16dp"
+      android:paddingBottom="@dimen/padding_bottom_calc_header"
+      android:paddingTop="@dimen/padding_top_calc_header"
       app:layout_constraintStart_toStartOf="parent"
-      android:layout_marginBottom="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:orientation="vertical"
+      android:layout_height="wrap_content">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/textViewOperation"
+          android:text="10.32"
+          style="@style/TextViewOperation"/>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:text="42.32"
+        style="@style/TextViewPreview"/>
+  </LinearLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/layoutParentButtons"
+      android:layout_width="0dp"
+      app:layout_constraintBottom_toTopOf="@+id/layoutParentBottomButtons"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/layoutParentHeader"
+      android:layout_height="0dp"
+      android:paddingTop="0dp"
+      android:paddingBottom="8dp"
+      android:paddingEnd="8dp"
+      android:paddingStart="8dp">
+
+    <View
+        android:id="@+id/viewBlank1"
+        android:clickable="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineStart"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ButtonNumbers"/>
+
+    <View
+        android:id="@+id/viewBlank2"
+        android:clickable="false"
+        app:layout_constraintStart_toEndOf="@+id/guidelineMiddle"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintBottom_toTopOf="@+id/button9"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ButtonNumbers"/>
+
+    <Button
+        android:id="@+id/buttonClear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/clear"
+        android:textSize="18sp"
+        android:textColor="@color/colorOperationsButtonIcon"
+        style="@style/ButtonOperations"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonDivide"
+        app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonTimes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_divide"
+        style="@style/ButtonOperations"
+        tools:ignore="ContentDescription"/>
+
+    <Button
+        android:id="@+id/button7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineStart"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/viewBlank1"
+        style="@style/ButtonNumbers"
+        android:text="@string/_7"/>
+
+    <Button
+        android:id="@+id/button8"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineMiddle"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClear"
+        style="@style/ButtonNumbers"
+        android:text="@string/_8"/>
+
+    <Button
+        android:id="@+id/button9"
+        app:layout_constraintStart_toEndOf="@+id/guidelineMiddle"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/viewBlank2"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        style="@style/ButtonNumbers"
+        android:text="@string/_9"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonTimes"
+        app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonMinus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonDivide"
+        android:src="@drawable/ic_times"
+        style="@style/ButtonOperations"
+        tools:ignore="ContentDescription"/>
+
+    <Button
+        android:id="@+id/button4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        style="@style/ButtonNumbers"
+        android:text="@string/_4"/>
+
+    <Button
+        android:id="@+id/button5"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineMiddle"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        style="@style/ButtonNumbers"
+        android:text="@string/_5"/>
+
+    <Button
+        android:id="@+id/button6"
+        app:layout_constraintStart_toEndOf="@+id/guidelineMiddle"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        style="@style/ButtonNumbers"
+        android:text="@string/_6"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonMinus"
+        app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonTimes"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonPlus"
+        style="@style/ButtonOperations"
+        tools:ignore="ContentDescription"
+        android:src="@drawable/ic_minus"/>
+
+    <Button
+        android:id="@+id/button1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        style="@style/ButtonNumbers"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPoint"
+        android:text="@string/_1"/>
+
+    <Button
+        android:id="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/button0"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        style="@style/ButtonNumbers"
+        android:text="@string/_2"/>
+
+    <Button
+        android:id="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/guidelineMiddle"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/viewBlank3"
+        style="@style/ButtonNumbers"
+        android:text="@string/_3"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonPlus"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonEqual"
+        app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonMinus"
+        tools:ignore="ContentDescription"
+        android:src="@drawable/ic_plus"
+        style="@style/ButtonOperations"/>
+
+    <Button
+        android:id="@+id/buttonPoint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        android:text="@string/_point"
+        style="@style/ButtonNumbers"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/button0"
+        app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        android:text="@string/_0"
+        style="@style/ButtonNumbers"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:id="@+id/viewBlank3"
+        app:layout_constraintStart_toEndOf="@+id/guidelineMiddle"
+        android:clickable="false"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        style="@style/ButtonNumbers"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonEqual"
+        app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonPlus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/ButtonEqual"
+        tools:ignore="ContentDescription"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <LinearLayout
+      android:id="@+id/layoutParentBottomButtons"
+      android:layout_width="match_parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintBottom_toBottomOf="parent"
-      android:layout_marginEnd="8dp"
-      app:layout_constraintEnd_toEndOf="parent"/>
+      android:layout_height="wrap_content"
+      android:background="@android:color/white"
+      android:elevation="8dp"
+      android:padding="@dimen/padding_bottom_buttons"
+      android:orientation="horizontal"
+      android:weightSum="10">
+
+    <Button
+        android:id="@+id/buttonCancel"
+        style="@style/ButtonCancel"/>
+
+    <Button
+        android:id="@+id/buttonCheckout"
+        style="@style/ButtonConfirm"/>
+  </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
