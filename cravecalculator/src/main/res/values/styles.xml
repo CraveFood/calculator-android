@@ -68,17 +68,19 @@
     <item name="android:maxLines">1</item>
     <item name="android:textColor">@color/colorOperationText</item>
     <item name="android:fontFamily">@font/lato_regular</item>
+    <item name="android:textAlignment">textEnd</item>
   </style>
 
   <style name="TextViewPreview">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
-    <item name="android:textSize">40sp</item>
+    <item name="android:textSize">32sp</item>
     <item name="android:layout_gravity">end</item>
     <item name="android:gravity">end</item>
     <item name="android:maxLines">1</item>
     <item name="android:textColor">@color/colorPreviewText</item>
     <item name="android:fontFamily">@font/lato_regular</item>
+    <item name="android:layout_marginBottom">16dp</item>
   </style>
 
   <style name="TextViewResult" parent="TextViewPreview">
