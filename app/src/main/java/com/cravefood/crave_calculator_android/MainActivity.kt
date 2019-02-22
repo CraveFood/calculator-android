@@ -1,6 +1,7 @@
 package com.cravefood.crave_calculator_android
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cravefood.cravecalculator.CalculatorFragment
 
@@ -12,7 +13,11 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().add(
             R.id.frameLayout,
-            CalculatorFragment.newInstance()
+            CalculatorFragment.newInstance({
+                Toast.makeText(this, "Cancel", Toast.LENGTH_SHORT).show()
+            }, {
+                Toast.makeText(this, "Confirm $it", Toast.LENGTH_SHORT).show()
+            })
         ).commit()
     }
 }
