@@ -8,22 +8,29 @@
     android:layout_height="match_parent"
     tools:context=".CalculatorFragment">
 
-  <LinearLayout
-      android:id="@+id/layoutParentHeader"
-      android:layout_width="match_parent"
-      app:layout_constraintTop_toTopOf="parent"
-      android:paddingStart="16dp"
-      android:paddingEnd="16dp"
-      android:paddingBottom="@dimen/padding_bottom_calc_header"
-      android:paddingTop="@dimen/padding_top_calc_header"
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/layoutParentButtons"
+      android:layout_width="0dp"
+      app:layout_constraintBottom_toTopOf="@+id/layoutParentBottomButtons"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      android:orientation="vertical"
-      android:layout_height="wrap_content">
+      app:layout_constraintTop_toTopOf="parent"
+      android:layout_height="0dp"
+      android:paddingTop="0dp"
+      android:paddingBottom="8dp"
+      android:paddingEnd="8dp"
+      android:paddingStart="8dp">
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResult"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_bias="1.0">
 
       <TextView
           android:id="@+id/textViewOperation"
@@ -32,48 +39,20 @@
     </HorizontalScrollView>
 
     <TextView
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHorizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/textViewResult"
         android:text="42.32"
+        android:layout_marginBottom="16dp"
         style="@style/TextViewPreview"/>
-  </LinearLayout>
-
-  <androidx.constraintlayout.widget.ConstraintLayout
-      android:id="@+id/layoutParentButtons"
-      android:layout_width="0dp"
-      app:layout_constraintBottom_toTopOf="@+id/layoutParentBottomButtons"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/layoutParentHeader"
-      android:layout_height="0dp"
-      android:paddingTop="0dp"
-      android:paddingBottom="8dp"
-      android:paddingEnd="8dp"
-      android:paddingStart="8dp">
-
-    <View
-        android:id="@+id/viewBlank1"
-        android:clickable="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineStart"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/ButtonNumbers"/>
-
-    <View
-        android:id="@+id/viewBlank2"
-        android:clickable="false"
-        app:layout_constraintStart_toEndOf="@+id/guidelineMiddle"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/ButtonNumbers"/>
 
     <Button
         android:id="@+id/buttonClear"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonDivide"
         android:text="@string/clear"
         android:textSize="18sp"
         android:textColor="@color/colorOperationsButtonIcon"
@@ -84,7 +63,7 @@
         app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
         app:layout_constraintBottom_toTopOf="@+id/imageButtonTimes"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClear"
         android:src="@drawable/ic_divide"
         style="@style/ButtonOperations"
         tools:ignore="ContentDescription"/>
@@ -94,27 +73,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineStart"
         app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/viewBlank1"
         style="@style/ButtonNumbers"
-        android:text="@string/_7"/>
+        android:text="@string/_7"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal"/>
 
     <Button
         android:id="@+id/button8"
         app:layout_constraintStart_toEndOf="@+id/guidelineStart"
         app:layout_constraintEnd_toStartOf="@+id/guidelineMiddle"
         app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/buttonClear"
         style="@style/ButtonNumbers"
-        android:text="@string/_8"/>
+        android:text="@string/_8"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal"/>
 
     <Button
         android:id="@+id/button9"
         app:layout_constraintStart_toEndOf="@+id/guidelineMiddle"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintTop_toBottomOf="@+id/viewBlank2"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         style="@style/ButtonNumbers"
-        android:text="@string/_9"/>
+        android:text="@string/_9"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal"/>
 
     <ImageButton
         android:id="@+id/imageButtonTimes"
@@ -186,19 +168,19 @@
         app:layout_constraintStart_toEndOf="@+id/guidelineMiddle"
         app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         app:layout_constraintTop_toBottomOf="@+id/button6"
-        app:layout_constraintBottom_toTopOf="@+id/viewBlank3"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonEqual"
         style="@style/ButtonNumbers"
         android:text="@string/_3"/>
 
     <ImageButton
         android:id="@+id/imageButtonPlus"
-        app:layout_constraintBottom_toTopOf="@+id/imageButtonEqual"
         app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonMinus"
         tools:ignore="ContentDescription"
         android:src="@drawable/ic_plus"
-        style="@style/ButtonOperations"/>
+        style="@style/ButtonOperations" android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
         android:id="@+id/buttonPoint"
@@ -218,44 +200,42 @@
         style="@style/ButtonNumbers"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <View
-        android:id="@+id/viewBlank3"
-        app:layout_constraintStart_toEndOf="@+id/guidelineMiddle"
-        android:clickable="false"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        style="@style/ButtonNumbers"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
     <ImageButton
+        app:layout_constraintStart_toEndOf="@+id/guidelineMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
         android:id="@+id/imageButtonEqual"
-        app:layout_constraintStart_toEndOf="@+id/guidelineEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonPlus"
         app:layout_constraintBottom_toBottomOf="parent"
         style="@style/ButtonEqual"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription" app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        android:layout_marginEnd="8dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25"/>
+        app:layout_constraintGuide_percent="0.27"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineMiddle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.50"/>
+        app:layout_constraintGuide_percent="0.54"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75"/>
+        app:layout_constraintGuide_percent="0.8"/>
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -268,7 +248,7 @@
       android:layout_height="wrap_content"
       android:background="@android:color/white"
       android:elevation="8dp"
-      android:padding="@dimen/padding_bottom_buttons"
+      android:padding="16dp"
       android:orientation="horizontal"
       android:weightSum="10">
 
