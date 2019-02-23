@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.HorizontalScrollView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -33,6 +34,7 @@ class CalculatorFragment : Fragment() {
 
         viewModel.currentExpressionObservable.observe(this, Observer {
             textViewOperation.text = it
+            focusOperationText()
         })
 
         viewModel.resultObservable.observe(this, Observer {
@@ -92,6 +94,13 @@ class CalculatorFragment : Fragment() {
     private fun cancelTapped() {
         if (onCancelListener != null) onCancelListener?.invoke()
         else activity?.onBackPressed()
+    }
+
+    private fun focusOperationText() {
+        horizontalScrollView.postDelayed(
+            Runnable { horizontalScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) },
+            100L
+        )
     }
 
     companion object {
