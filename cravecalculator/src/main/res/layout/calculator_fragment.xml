@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/textViewResult"
@@ -34,7 +34,6 @@
 
       <TextView
           android:id="@+id/textViewOperation"
-          android:text="10.32"
           style="@style/TextViewOperation"/>
     </HorizontalScrollView>
 
@@ -43,8 +42,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/textViewResult"
-        android:text="42.32"
-        android:layout_marginBottom="16dp"
         style="@style/TextViewPreview"/>
 
     <Button
@@ -179,7 +176,8 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButtonMinus"
         tools:ignore="ContentDescription"
         android:src="@drawable/ic_plus"
-        style="@style/ButtonOperations" android:layout_marginBottom="8dp"
+        style="@style/ButtonOperations"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
@@ -187,7 +185,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/button1"
-        android:text="@string/_point"
+        tools:text="."
         style="@style/ButtonNumbers"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
@@ -206,7 +204,8 @@
         android:id="@+id/imageButtonEqual"
         app:layout_constraintBottom_toBottomOf="parent"
         style="@style/ButtonEqual"
-        tools:ignore="ContentDescription" app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
         android:layout_marginEnd="8dp"/>
 
     <androidx.constraintlayout.widget.Guideline
@@ -257,7 +256,7 @@
         style="@style/ButtonCancel"/>
 
     <Button
-        android:id="@+id/buttonCheckout"
+        android:id="@+id/buttonConfirm"
         style="@style/ButtonConfirm"/>
   </LinearLayout>
 
