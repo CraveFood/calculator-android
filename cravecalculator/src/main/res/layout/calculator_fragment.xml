@@ -22,6 +22,7 @@
       android:paddingStart="8dp">
 
     <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="16dp"
