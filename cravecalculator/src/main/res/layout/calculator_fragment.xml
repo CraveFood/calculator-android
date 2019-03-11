@@ -53,7 +53,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageButtonDivide"
         android:text="@string/clear"
         android:textSize="18sp"
-        android:textColor="@color/colorOperationsButtonIcon"
+        android:textColor="@color/cCalColorOperationsButtonIcon"
         style="@style/ButtonOperations"/>
 
     <ImageButton

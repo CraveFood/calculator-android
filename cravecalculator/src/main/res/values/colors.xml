@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorDisabled">#D3DADC</color>
-  <color name="colorRippleButton">#000000</color>
-  <color name="colorEqualButtonBackground">#0D2ECC71</color>
-  <color name="colorEqualButtonIcon">#2ECC71</color>
-  <color name="colorOperationsButtonBackground">#0DFD6A08</color>
-  <color name="colorOperationsButtonIcon">#FD6A08</color>
-  <color name="colorNumbersButtonBackground">@android:color/white</color>
-  <color name="colorNumbersButtonIcon">#2F313A</color>
-  <color name="colorConfirmButtonBackground">#FD6A08</color>
-  <color name="colorConfirmButtonText">@android:color/white</color>
-  <color name="colorCancelButtonBackground">@android:color/white</color>
-  <color name="colorCancelButtonText">#59636F</color>
-  <color name="colorOperationText">#2F313A</color>
-  <color name="colorPreviewText">#4D000000</color>
-  <color name="colorResultText">#2F313A</color>
+  <color name="cCalColorDisabled">#D3DADC</color>
+  <color name="cCalColorRippleButton">#000000</color>
+  <color name="cCalColorEqualButtonBackground">#0D2ECC71</color>
+  <color name="cCalColorEqualButtonIcon">#2ECC71</color>
+  <color name="cCalColorOperationsButtonBackground">#0DFD6A08</color>
+  <color name="cCalColorOperationsButtonIcon">#FD6A08</color>
+  <color name="cCalColorNumbersButtonBackground">@android:color/white</color>
+  <color name="cCalColorNumbersButtonIcon">#2F313A</color>
+  <color name="cCalColorConfirmButtonBackground">#FD6A08</color>
+  <color name="cCalColorConfirmButtonText">@android:color/white</color>
+  <color name="cCalColorCancelButtonBackground">@android:color/white</color>
+  <color name="cCalColorCancelButtonText">#59636F</color>
+  <color name="cCalColorOperationText">#2F313A</color>
+  <color name="cCalColorPreviewText">#4D000000</color>
+  <color name="cCalColorResultText">#2F313A</color>
 </resources>
