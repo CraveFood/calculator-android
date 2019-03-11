@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <style name="ButtonEqual">
+  <style name="CCalcButtonEqual">
     <item name="android:layout_width">0dp</item>
     <item name="android:layout_height">0dp</item>
     <item name="android:background">@drawable/c_calc_ripple_equal_button</item>
@@ -11,7 +11,7 @@
     <item name="android:layout_margin">6dp</item>
   </style>
 
-  <style name="ButtonOperations">
+  <style name="CCalcButtonOperations">
     <item name="android:layout_width">0dp</item>
     <item name="android:layout_height">0dp</item>
     <item name="android:background">@drawable/c_calc_ripple_operations_button</item>
@@ -22,7 +22,7 @@
     <item name="android:textAllCaps">false</item>
   </style>
 
-  <style name="ButtonNumbers">
+  <style name="CCalcButtonNumbers">
     <item name="android:layout_width">0dp</item>
     <item name="android:layout_height">0dp</item>
     <item name="android:background">@drawable/c_calc_ripple_numbers_button</item>
@@ -33,7 +33,7 @@
     <item name="android:fontFamily">@font/c_calc_lato_regular</item>
   </style>
 
-  <style name="ButtonConfirm">
+  <style name="CCalcButtonConfirm">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">56dp</item>
     <item name="android:layout_weight">4</item>
@@ -46,7 +46,7 @@
     <item name="android:fontFamily">@font/c_calc_lato_semibold</item>
   </style>
 
-  <style name="ButtonCancel">
+  <style name="CCalcButtonCancel">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">56dp</item>
     <item name="android:layout_weight">6</item>
@@ -60,7 +60,7 @@
     <item name="android:fontFamily">@font/c_calc_lato_semibold</item>
   </style>
 
-  <style name="TextViewOperation">
+  <style name="CCalcTextViewOperation">
     <item name="android:layout_width">wrap_content</item>
     <item name="android:layout_height">wrap_content</item>
     <item name="android:textSize">24sp</item>
@@ -71,7 +71,7 @@
     <item name="android:textAlignment">textEnd</item>
   </style>
 
-  <style name="TextViewPreview">
+  <style name="CCalcTextViewPreview">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">wrap_content</item>
     <item name="android:textSize">32sp</item>
@@ -83,7 +83,7 @@
     <item name="android:layout_marginBottom">16dp</item>
   </style>
 
-  <style name="TextViewResult" parent="TextViewPreview">
+  <style name="CCalcTextViewResult" parent="CCalcTextViewPreview">
     <item name="android:textColor">@color/cCalColorResultText</item>
   </style>
 </resources>
