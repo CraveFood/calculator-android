@@ -40,7 +40,7 @@
     <item name="android:background">@drawable/c_calc_selector_confirm_button</item>
     <item name="android:textColor">@color/cCalColorConfirmButtonText</item>
     <item name="android:textSize">14sp</item>
-    <item name="android:text">@string/charge_customer</item>
+    <item name="android:text">@string/c_calc_charge_customer</item>
     <item name="android:maxLines">1</item>
     <item name="android:layout_marginStart">4dp</item>
     <item name="android:fontFamily">@font/c_calc_lato_semibold</item>
@@ -55,7 +55,7 @@
     <item name="android:textColor">@color/cCalColorCancelButtonText</item>
     <item name="android:maxLines">1</item>
     <item name="android:textSize">14sp</item>
-    <item name="android:text">@string/cancel</item>
+    <item name="android:text">@string/c_calc_cancel</item>
     <item name="android:layout_marginEnd">4dp</item>
     <item name="android:fontFamily">@font/c_calc_lato_semibold</item>
   </style>

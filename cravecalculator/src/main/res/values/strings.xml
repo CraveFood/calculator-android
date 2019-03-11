@@ -1,21 +1,19 @@
 <resources>
-  <public />
+  <string name="c_calc_app_name">cravecalculator</string>
 
-  <string name="app_name">cravecalculator</string>
+  <string name="c_calc_point">.</string>
+  <string name="c_calc_0">0</string>
+  <string name="c_calc_1">1</string>
+  <string name="c_calc_2">2</string>
+  <string name="c_calc_3">3</string>
+  <string name="c_calc_4">4</string>
+  <string name="c_calc_5">5</string>
+  <string name="c_calc_6">6</string>
+  <string name="c_calc_7">7</string>
+  <string name="c_calc_8">8</string>
+  <string name="c_calc_9">9</string>
 
-  <string name="_point">.</string>
-  <string name="_0">0</string>
-  <string name="_1">1</string>
-  <string name="_2">2</string>
-  <string name="_3">3</string>
-  <string name="_4">4</string>
-  <string name="_5">5</string>
-  <string name="_6">6</string>
-  <string name="_7">7</string>
-  <string name="_8">8</string>
-  <string name="_9">9</string>
-
-  <string name="charge_customer">Charge Customer</string>
-  <string name="clear">C</string>
-  <string name="cancel">Cancel</string>
+  <string name="c_calc_charge_customer">Charge Customer</string>
+  <string name="c_calc_clear">C</string>
+  <string name="c_calc_cancel">Cancel</string>
 </resources>
