@@ -3,7 +3,6 @@
   <img src="https://avatars1.githubusercontent.com/u/16109321?s=200&v=4" width="150">
   <br>
   Calculator Android Fragment
-  <br>
 </h1>
 
 <h4 align="center">An open source calculator created by <a href="https://cravehq.com/" target="_blank">Crave</a>.</h4>
