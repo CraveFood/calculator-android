@@ -50,6 +50,7 @@ dependencies {
 ...
 }
 ```
+Sync your project again.<br>
 Now you can use the fragment calling:
 ```kotlin
 CalculatorFragment.newInstance { total -> // total is a Double
