@@ -18,7 +18,7 @@
     <item name="android:tint">@color/colorOperationsButtonIcon</item>
     <item name="android:textColor">@color/colorOperationsButtonIcon</item>
     <item name="android:layout_margin">6dp</item>
-    <item name="android:fontFamily">@font/lato_regular</item>
+    <item name="android:fontFamily">@font/c_calc_lato_regular</item>
     <item name="android:textAllCaps">false</item>
   </style>
 
@@ -30,7 +30,7 @@
     <item name="android:textColor">@color/colorNumbersButtonIcon</item>
     <item name="android:layout_margin">6dp</item>
     <item name="android:textSize">24sp</item>
-    <item name="android:fontFamily">@font/lato_regular</item>
+    <item name="android:fontFamily">@font/c_calc_lato_regular</item>
   </style>
 
   <style name="ButtonConfirm">
@@ -43,7 +43,7 @@
     <item name="android:text">@string/charge_customer</item>
     <item name="android:maxLines">1</item>
     <item name="android:layout_marginStart">4dp</item>
-    <item name="android:fontFamily">@font/lato_semibold</item>
+    <item name="android:fontFamily">@font/c_calc_lato_semibold</item>
   </style>
 
   <style name="ButtonCancel">
@@ -57,7 +57,7 @@
     <item name="android:textSize">14sp</item>
     <item name="android:text">@string/cancel</item>
     <item name="android:layout_marginEnd">4dp</item>
-    <item name="android:fontFamily">@font/lato_semibold</item>
+    <item name="android:fontFamily">@font/c_calc_lato_semibold</item>
   </style>
 
   <style name="TextViewOperation">
@@ -67,7 +67,7 @@
     <item name="android:layout_gravity">end</item>
     <item name="android:maxLines">1</item>
     <item name="android:textColor">@color/colorOperationText</item>
-    <item name="android:fontFamily">@font/lato_regular</item>
+    <item name="android:fontFamily">@font/c_calc_lato_regular</item>
     <item name="android:textAlignment">textEnd</item>
   </style>
 
@@ -79,7 +79,7 @@
     <item name="android:gravity">end</item>
     <item name="android:maxLines">1</item>
     <item name="android:textColor">@color/colorPreviewText</item>
-    <item name="android:fontFamily">@font/lato_regular</item>
+    <item name="android:fontFamily">@font/c_calc_lato_regular</item>
     <item name="android:layout_marginBottom">16dp</item>
   </style>
 
