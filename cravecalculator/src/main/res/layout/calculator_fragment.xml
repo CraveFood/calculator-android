@@ -62,7 +62,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageButtonTimes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonClear"
-        android:src="@drawable/ic_divide"
+        android:src="@drawable/c_calc_ic_divide"
         style="@style/ButtonOperations"
         tools:ignore="ContentDescription"/>
 
@@ -102,7 +102,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageButtonMinus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonDivide"
-        android:src="@drawable/ic_times"
+        android:src="@drawable/c_calc_ic_times"
         style="@style/ButtonOperations"
         tools:ignore="ContentDescription"/>
 
@@ -141,7 +141,7 @@
         app:layout_constraintBottom_toTopOf="@+id/imageButtonPlus"
         style="@style/ButtonOperations"
         tools:ignore="ContentDescription"
-        android:src="@drawable/ic_minus"/>
+        android:src="@drawable/c_calc_ic_minus"/>
 
     <Button
         android:id="@+id/button1"
@@ -176,7 +176,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonMinus"
         tools:ignore="ContentDescription"
-        android:src="@drawable/ic_plus"
+        android:src="@drawable/c_calc_ic_plus"
         style="@style/ButtonOperations"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"/>

@@ -4,17 +4,17 @@
   <style name="ButtonEqual">
     <item name="android:layout_width">0dp</item>
     <item name="android:layout_height">0dp</item>
-    <item name="android:background">@drawable/ripple_equal_button</item>
+    <item name="android:background">@drawable/c_calc_ripple_equal_button</item>
     <item name="android:tint">@color/colorEqualButtonIcon</item>
     <item name="android:textColor">@color/colorEqualButtonIcon</item>
-    <item name="android:src">@drawable/ic_equal</item>
+    <item name="android:src">@drawable/c_calc_ic_equal</item>
     <item name="android:layout_margin">6dp</item>
   </style>
 
   <style name="ButtonOperations">
     <item name="android:layout_width">0dp</item>
     <item name="android:layout_height">0dp</item>
-    <item name="android:background">@drawable/ripple_operations_button</item>
+    <item name="android:background">@drawable/c_calc_ripple_operations_button</item>
     <item name="android:tint">@color/colorOperationsButtonIcon</item>
     <item name="android:textColor">@color/colorOperationsButtonIcon</item>
     <item name="android:layout_margin">6dp</item>
@@ -25,7 +25,7 @@
   <style name="ButtonNumbers">
     <item name="android:layout_width">0dp</item>
     <item name="android:layout_height">0dp</item>
-    <item name="android:background">@drawable/ripple_numbers_button</item>
+    <item name="android:background">@drawable/c_calc_ripple_numbers_button</item>
     <item name="android:tint">@color/colorNumbersButtonIcon</item>
     <item name="android:textColor">@color/colorNumbersButtonIcon</item>
     <item name="android:layout_margin">6dp</item>
@@ -37,7 +37,7 @@
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">56dp</item>
     <item name="android:layout_weight">4</item>
-    <item name="android:background">@drawable/selector_confirm_button</item>
+    <item name="android:background">@drawable/c_calc_selector_confirm_button</item>
     <item name="android:textColor">@color/colorConfirmButtonText</item>
     <item name="android:textSize">14sp</item>
     <item name="android:text">@string/charge_customer</item>
@@ -51,7 +51,7 @@
     <item name="android:layout_height">56dp</item>
     <item name="android:layout_weight">6</item>
     <item name="android:elevation">0dp</item>
-    <item name="android:background">@drawable/ripple_cancel_button</item>
+    <item name="android:background">@drawable/c_calc_ripple_cancel_button</item>
     <item name="android:textColor">@color/colorCancelButtonText</item>
     <item name="android:maxLines">1</item>
     <item name="android:textSize">14sp</item>
