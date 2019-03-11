@@ -13,11 +13,9 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().add(
             R.id.frameLayout,
-            CalculatorFragment.newInstance({
-                Toast.makeText(this, "Cancel", Toast.LENGTH_SHORT).show()
-            }, {
-                Toast.makeText(this, "Confirm $it", Toast.LENGTH_SHORT).show()
-            })
+            CalculatorFragment.newInstance {
+                Toast.makeText(this, "Total $it", Toast.LENGTH_SHORT).show()
+            }
         ).commit()
     }
 }
