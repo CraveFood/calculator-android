@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import kotlinx.android.synthetic.main.calculator_fragment.*
+import kotlinx.android.synthetic.main.c_calc_fragment.*
 
 
 class CalculatorFragment : Fragment() {
@@ -19,7 +19,7 @@ class CalculatorFragment : Fragment() {
     private var onConfirmListener: ((Double) -> Unit)? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.calculator_fragment, container, false)
+        return inflater.inflate(R.layout.c_calc_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

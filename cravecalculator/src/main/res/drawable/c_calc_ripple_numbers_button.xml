@@ -2,5 +2,5 @@
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
         android:color="?android:colorControlHighlight">
   <item android:id="@android:id/mask"
-        android:drawable="@drawable/shape_numbers_button"/>
+        android:drawable="@drawable/c_calc_shape_numbers_button"/>
 </ripple>
