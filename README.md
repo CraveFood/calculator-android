@@ -19,38 +19,38 @@
 
 ## Key Features
 * Evaluating expressions
-  - The calculator implement a small library <a href="https://www.objecthunter.net/exp4j/index.html">exp4j</a>, that implements <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">Dijkstra's Shunting Yard Algorithm</a>
+  - The calculator implements a small library <a href="https://www.objecthunter.net/exp4j/index.html">exp4j</a>, which implements <a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">Dijkstra's Shunting Yard Algorithm</a>
 * Fragment
   - Use it easily in Activities and Fragments
-  - Give it a delegate to be called when any calc update happen
+  - Give it a delegate to be called when any calculation update happens
 * Kotlin language
   - Implemented using Kotlin language
 
 ## How To Use
 
-Add the <a href="https://jitpack.io/">JitPack</a> in your `build.gradle` file:
+Add the <a href="https://jitpack.io/">JitPack</a> in your project level `build.gradle` file:
 
 ```gradle
 allprojects {
 	repositories {
-    ...
+    // ...
 		maven { url 'https://jitpack.io' }
-    ...
+    // ...
 	}
 }
 ```
 
-After that add the library in your dependencies file. Check the last <a href="https://github.com/CraveFood/calculator-android/releases">release</a>
+After that , add the library as a dependency to your app level build.gradle file. Check the latest <a href="https://github.com/CraveFood/calculator-android/releases">release</a>
 
 ```gradle
 dependencies {
-...
-	implementation "com.github.CraveFood:calculator-android:$calculatorAndroidVersion"
-...
+    // ...
+	implementation "com.github.CraveFood:calculator-android:0.0.4"
+    // ...
 }
 ```
 Sync your project.<br>
-Now you can use the fragment calling:
+Now you can use the fragment by calling:
 ```kotlin
 CalculatorFragment.newInstance { total -> // total is a Double
   Toast.makeText(this, "Total $total", Toast.LENGTH_SHORT).show() // Example code
