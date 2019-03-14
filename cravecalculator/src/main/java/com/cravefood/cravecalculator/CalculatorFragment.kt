@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.HorizontalScrollView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -15,8 +14,7 @@ import kotlinx.android.synthetic.main.c_calc_fragment.*
 class CalculatorFragment : Fragment() {
 
     private lateinit var viewModel: CalculatorViewModel
-    private var onCancelListener: (() -> Unit)? = null
-    private var onConfirmListener: ((Double) -> Unit)? = null
+    private var onTotalListener: ((Double) -> Unit)? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.c_calc_fragment, container, false)
@@ -37,14 +35,12 @@ class CalculatorFragment : Fragment() {
             focusOperationText()
         })
 
-        viewModel.resultObservable.observe(this, Observer {
-            if (it != null) {
-                textViewResult.text = getFormatResult(it)
-
-                buttonConfirm.isEnabled = it > 0.0
+        viewModel.resultObservable.observe(this, Observer { total ->
+            if (total != null) {
+                textViewResult.text = getFormatResult(total)
+                onTotalListener?.invoke(total)
             } else {
                 textViewResult.text = ""
-                buttonConfirm.isEnabled = false
             }
         })
     }
@@ -79,21 +75,6 @@ class CalculatorFragment : Fragment() {
         imageButtonPlus.setOnClickListener { viewModel.addOperator(OPERATOR_PLUS) }
 
         imageButtonEqual.setOnClickListener { viewModel.getResult() }
-
-        buttonCancel.setOnClickListener { cancelTapped() }
-        buttonConfirm.setOnClickListener { confirmTapped() }
-    }
-
-    private fun confirmTapped() {
-        val total = viewModel.resultObservable.value ?: 0.0
-        if (onConfirmListener != null) {
-            onConfirmListener?.invoke(total)
-        } else Toast.makeText(context, "Total: $total", Toast.LENGTH_SHORT).show()
-    }
-
-    private fun cancelTapped() {
-        if (onCancelListener != null) onCancelListener?.invoke()
-        else activity?.onBackPressed()
     }
 
     private fun focusOperationText() {
@@ -104,13 +85,9 @@ class CalculatorFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(
-            cancelListener: (() -> Unit)? = null,
-            confirmListener: ((Double) -> Unit)? = null
-        ): CalculatorFragment {
+        fun newInstance(onTotalListener: ((Double) -> Unit)? = null): CalculatorFragment {
             val fragment = CalculatorFragment()
-            fragment.onCancelListener = cancelListener
-            fragment.onConfirmListener = confirmListener
+            fragment.onTotalListener = onTotalListener
             return fragment
         }
     }

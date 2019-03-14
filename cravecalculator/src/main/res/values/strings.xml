@@ -13,7 +13,5 @@
   <string name="c_calc_8">8</string>
   <string name="c_calc_9">9</string>
 
-  <string name="c_calc_charge_customer">Charge Customer</string>
   <string name="c_calc_clear">C</string>
-  <string name="c_calc_cancel">Cancel</string>
 </resources>
