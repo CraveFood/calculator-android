@@ -10,11 +10,12 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.c_calc_fragment.*
 
-
 class CalculatorFragment : Fragment() {
 
     private lateinit var viewModel: CalculatorViewModel
     private var onTotalListener: ((Double) -> Unit)? = null
+    private var onCleanListener: (() -> Unit)? = null
+    private var onOperatorListener: ((String) -> Unit)? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.c_calc_fragment, container, false)
@@ -62,17 +63,33 @@ class CalculatorFragment : Fragment() {
         button8.setOnClickListener { viewModel.addNumber(NUMBER_8) }
         button9.setOnClickListener { viewModel.addNumber(NUMBER_9) }
 
-        buttonClear.setOnClickListener { viewModel.removeLastIndex() }
+        buttonClear.setOnClickListener {
+            onCleanListener?.invoke()
+            viewModel.removeLastIndex()
+        }
         buttonClear.setOnLongClickListener {
+            onCleanListener?.invoke()
             viewModel.clearExpression()
 
             return@setOnLongClickListener true
         }
 
-        imageButtonDivide.setOnClickListener { viewModel.addOperator(OPERATOR_DIVIDE) }
-        imageButtonTimes.setOnClickListener { viewModel.addOperator(OPERATOR_TIMES) }
-        imageButtonMinus.setOnClickListener { viewModel.addOperator(OPERATOR_MINUS) }
-        imageButtonPlus.setOnClickListener { viewModel.addOperator(OPERATOR_PLUS) }
+        imageButtonDivide.setOnClickListener {
+            onOperatorListener?.invoke(OPERATOR_DIVIDE)
+            viewModel.addOperator(OPERATOR_DIVIDE)
+        }
+        imageButtonTimes.setOnClickListener {
+            onOperatorListener?.invoke(OPERATOR_TIMES)
+            viewModel.addOperator(OPERATOR_TIMES)
+        }
+        imageButtonMinus.setOnClickListener {
+            onOperatorListener?.invoke(OPERATOR_MINUS)
+            viewModel.addOperator(OPERATOR_MINUS)
+        }
+        imageButtonPlus.setOnClickListener {
+            onOperatorListener?.invoke(OPERATOR_PLUS)
+            viewModel.addOperator(OPERATOR_PLUS)
+        }
 
         imageButtonEqual.setOnClickListener { viewModel.getResult() }
     }
@@ -85,9 +102,15 @@ class CalculatorFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(onTotalListener: ((Double) -> Unit)? = null): CalculatorFragment {
+        fun newInstance(
+            onTotalListener: ((Double) -> Unit)? = null,
+            onCleanListener: (() -> Unit)? = null,
+            onOperatorListener: ((String) -> Unit)? = null
+        ): CalculatorFragment {
             val fragment = CalculatorFragment()
             fragment.onTotalListener = onTotalListener
+            fragment.onCleanListener = onCleanListener
+            fragment.onOperatorListener = onOperatorListener
             return fragment
         }
     }
